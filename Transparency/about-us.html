@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Additional styles for About Us page */
+        .about-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                url("https://wallpaperaccess.com/full/2358939.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .our-story {
+            padding: 60px 20px;
+            background-color: white;
+        }
+        
+        .story-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .story-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .story-image {
+            flex: 1;
+            min-width: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .story-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .mission-vision {
+            background-color: var(--light-blue);
+            padding: 60px 20px;
+        }
+        
+        .mission-vision-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        
+        .mission, .vision {
+            flex: 1;
+            min-width: 300px;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .mission h3, .vision h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .mission h3 i, .vision h3 i {
+            margin-right: 10px;
+            font-size: 28px;
+        }
+        
+        .donation-details {
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+            margin-top: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .donation-details h4 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        .donation-details ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .donation-details ul li {
+            margin-bottom: 8px;
+        }
+        
+        .donation-stats {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .stat {
+            background-color: var(--light-blue);
+            padding: 15px;
+            border-radius: 5px;
+            flex: 1;
+            min-width: 120px;
+            text-align: center;
+        }
+        
+        .stat h5 {
+            font-size: 24px;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+        
+        .team {
+            padding: 60px 20px;
+            background-color: white;
+        }
+        
+        .team-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 30px auto 0;
+        }
+        
+        .team-member {
+            width: calc(25% - 30px);
+            min-width: 220px;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .team-member:hover {
+            transform: translateY(-10px);
+        }
+        
+        .team-member img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+        
+        .team-member-info {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .team-member-info h3 {
+            color: var(--primary-color);
+            margin-bottom: 5px;
+            font-size: 18px;
+        }
+        
+        .team-member-info p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        
+        .team-social {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .team-social a {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background-color: var(--light-blue);
+            border-radius: 50%;
+            color: var(--primary-color);
+            text-align: center;
+            line-height: 30px;
+            transition: all 0.3s;
+        }
+        
+        .team-social a:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .team-member {
+                width: calc(50% - 15px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="" alt="">
+            KEMOS DONATION
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="Home Page.html">Home</a></li>
+                <li><a href="about-us.html" class="active">About Us</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="contact2.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero about-hero">
+        <div class="overlay">
+            <h1>About <span>Kemos</span> Donation</h1>
+            <p>Learn about our journey, mission, and the impact we're making in communities across Kenya.</p>
+        </div>
+    </section>
+
+    <section class="our-story">
+        <h2 class="section-title">Our Story</h2>
+        <div class="story-content">
+            <div class="story-text">
+                <p>Kelvin Wandera and Moses Mugo saw a major problem in Kenya’s charitable sector—many donors were contributing money to causes like Moraya Children's Home, but there was little to no transparency about how those funds were being used.</p>  
+                <p>Without clear records or accountability, donors were left in the dark, unsure if their contributions were truly making a difference. Determined to address this issue, they set out to create a web-based system that would track and display donation usage in real-time.</p>  
+                <p>What started as an idea to bring clarity to a single orphanage has now grown into a broader mission to ensure transparency and trust in charitable giving across Kenya.</p>
+            </div>
+            <div class="story-image">
+                <img src="https://images.pexels.com/photos/19167495/pexels-photo-19167495/free-photo-of-a-sign-that-says-vote-here-and-a-blue-door.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Kemos Donation volunteers">
+            </div>
+        </div>
+    </section>
+
+    <section class="mission-vision">
+        <h2 class="section-title">Our Mission & Vision</h2>
+        <div class="mission-vision-content">
+            <div class="mission">
+                <h3><i class="fas fa-bullseye"></i> Our Mission</h3>
+                <p>Our mission is to bring transparency and accountability to charitable donations in Kenya by providing a reliable platform for NGOs that lack clear financial reporting.</p>  
+                <p>We aim to bridge the gap between donors and NGOs by ensuring that every contribution is tracked and utilized effectively, fostering trust and maximizing the impact of donations.</p>  
+                <p>Through our web-based system, we empower organizations to be more transparent while giving donors the confidence that their generosity is truly making a difference.</p>
+            </div>
+            <div class="vision">
+                <h3><i class="fas fa-eye"></i> Our Vision</h3>
+                <p>Our vision is to transform the charitable sector in Kenya by setting a new standard for transparency and accountability in NGO donations.</p>  
+                <p>We envision a future where every donor can track how their contributions are spent, ensuring that funds reach the intended beneficiaries and create meaningful change.</p>  
+                <p>By leveraging technology, we strive to build a culture of trust and efficiency in charitable giving, empowering NGOs to operate with integrity and donors to give with confidence.</p>
+        </div>
+    </section>
+
+    <section class="featured-donations">
+        <h2 class="section-title">Our Donation Programs</h2>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto 30px;">Our donation programs are carefully designed to address the most pressing needs in the communities we serve. Each program focuses on a specific area of need, ensuring that our resources are used effectively and efficiently.</p>
+        
+        <div class="project-grid">
+            <div class="project-card">
+                <img src="https://wallpaperaccess.com/full/4219101.jpg" alt="Food and Groceries">
+                <h3>Food and Groceries</h3>
+                <p>Providing nutritious meals to orphanages and families in need.</p>
+                <div class="donation-details">
+                    <h4>What We Provide:</h4>
+                    <ul>
+                        <li>Monthly food packages for families</li>
+                        <li>Weekly fresh produce deliveries to orphanages</li>
+                        <li>Emergency food relief during crises</li>
+                        <li>Nutritional supplements for children</li>
+                    </ul>
+                    
+                    <h4>Impact:</h4>
+                    <div class="donation-stats">
+                        <div class="stat">
+                            <h5>5,000+</h5>
+                            <p>Meals Provided Monthly</p>
+                        </div>
+                        <div class="stat">
+                            <h5>200+</h5>
+                            <p>Families Supported</p>
+                        </div>
+                        <div class="stat">
+                            <h5>20+</h5>
+                            <p>Orphanages Served</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="donate.html" class="learn-more">Support This Cause</a>
+            </div>
+            
+            <div class="project-card">
+                <img src="https://wallpapercave.com/wp/wp2595327.jpg" alt="Clothing and Shoes">
+                <h3>Clothing and Shoes</h3>
+                <p>Supplying essential clothing to those who lack proper attire.</p>
+                <div class="donation-details">
+                    <h4>What We Provide:</h4>
+                    <ul>
+                        <li>Seasonal clothing drives for all ages</li>
+                        <li>School uniforms for underprivileged students</li>
+                        <li>Professional attire for job seekers</li>
+                        <li>Shoes and footwear for children and adults</li>
+                    </ul>
+                    
+                    <h4>Impact:</h4>
+                    <div class="donation-stats">
+                        <div class="stat">
+                            <h5>3,000+</h5>
+                            <p>Clothing Items Distributed</p>
+                        </div>
+                        <div class="stat">
+                            <h5>500+</h5>
+                            <p>School Uniforms Provided</p>
+                        </div>
+                        <div class="stat">
+                            <h5>1,000+</h5>
+                            <p>Pairs of Shoes Donated</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="donate.html" class="learn-more">Support This Cause</a>
+            </div>
+            
+            <div class="project-card">
+                <img src="https://wallpaperbat.com/img/135836994-educational-background-wallpaper.jpg" alt="Educational Materials">
+                <h3>Educational Materials</h3>
+                <p>Equipping students with necessary school supplies and resources.</p>
+                <div class="donation-details">
+                    <h4>What We Provide:</h4>
+                    <ul>
+                        <li>Textbooks and reference materials</li>
+                        <li>School supplies (notebooks, pens, etc.)</li>
+                        <li>Educational technology (tablets, computers)</li>
+                        <li>Library resources for schools</li>
+                    </ul>
+                    
+                    <h4>Impact:</h4>
+                    <div class="donation-stats">
+                        <div class="stat">
+                            <h5>2,500+</h5>
+                            <p>Students Supported</p>
+                        </div>
+                        <div class="stat">
+                            <h5>50+</h5>
+                            <p>Schools Assisted</p>
+                        </div>
+                        <div class="stat">
+                            <h5>10,000+</h5>
+                            <p>Books Distributed</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="donate.html" class="learn-more">Support This Cause</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="team">
+        <h2 class="section-title">Meet Our Team</h2>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto 30px;">Our dedicated team of professionals and volunteers work tirelessly to ensure that Kemos Donation fulfills its mission and creates lasting impact in the communities we serve.</p>
+        
+        <div class="team-grid">
+            <div class="team-member">
+                <img src="" alt="">
+                <div class="team-member-info">
+                    <h3>Moses Mugo</h3>
+                    <p>Frontend Web Developer</p>
+                    <div class="team-social">
+                        <a href="https://ke.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://x.com/?lang=en"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.facebook.com/login/"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="team-member">
+                <img src="" alt="">
+                <div class="team-member-info">
+                    <h3>Kelvin Wandera</h3>
+                    <p>Backend Web Developer</p>
+                    <div class="team-social">
+                        <a href="https://ke.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://x.com/?lang=en"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.facebook.com/login/"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About KEMOS</h3>
+                <p>We're on a mission to transform how people give and make a positive impact in communities worldwide.</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/login/"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://x.com/?lang=en"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://ke.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Charity Lane, Nairobi, Kenya</p>
+                <p><i class="fas fa-phone"></i> +254 123 456 789</p>
+                <p><i class="fas fa-envelope"></i> info@kemosdonation.org</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; KEMOS DONATION. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Animate impact numbers in donation stats
+            const statNumbers = document.querySelectorAll(".stat h5");
+            
+            const animateValue = (obj, start, end, duration) => {
+                let startTimestamp = null;
+                const step = (timestamp) => {
+                    if (!startTimestamp) startTimestamp = timestamp;
+                    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                    obj.innerHTML = Math.floor(progress * (end - start) + start).toLocaleString() + (obj.getAttribute("data-suffix") || "");
+                    if (progress < 1) {
+                        window.requestAnimationFrame(step);
+                    }
+                };
+                window.requestAnimationFrame(step);
+            };
+            
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            const target = entry.target;
+                            const value = target.textContent.replace(/,/g, "").replace(/\+/g, "");
+                            const endValue = parseInt(value, 10);
+                            const suffix = target.textContent.includes("+") ? "+" : "";
+                            target.setAttribute("data-suffix", suffix);
+                            animateValue(target, 0, endValue, 2000);
+                            observer.unobserve(target);
+                        }
+                    });
+                },
+                { threshold: 0.5 }
+            );
+            
+            statNumbers.forEach((item) => {
+                observer.observe(item);
+            });
+            
+            // Add animation to project cards
+            const projectCards = document.querySelectorAll(".project-card");
+            projectCards.forEach((card, index) => {
+                card.style.opacity = "0";
+                card.style.transform = "translateY(20px)";
+                card.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+                
+                setTimeout(
+                    () => {
+                        card.style.opacity = "1";
+                        card.style.transform = "translateY(0)";
+                    },
+                    200 * (index + 1)
+                );
+            });
+            
+            // Add animation to team members
+            const teamMembers = document.querySelectorAll(".team-member");
+            teamMembers.forEach((member, index) => {
+                member.style.opacity = "0";
+                member.style.transform = "translateY(20px)";
+                member.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+                
+                setTimeout(
+                    () => {
+                        member.style.opacity = "1";
+                        member.style.transform = "translateY(0)";
+                    },
+                    200 * (index + 1)
+                );
+            });
+        });
+    </script>
+</body>
+</html>

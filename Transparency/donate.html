@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate</title>
+    <link rel="stylesheet" href="donate.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="" alt="">
+            KEMOS DONATION
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="Home Page.html">Home</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="donate.html" class="active">Donate</a></li>
+                <li><a href="contact2.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="donation-hero">
+        <div class="overlay">
+            <h1>Your <span>Generosity</span> Makes a Difference</h1>
+            <p>Every donation helps us support communities in need and create lasting change.</p>
+        </div>
+    </section>
+
+    <section class="donation-form-section">
+        <div class="container">
+            <h2 class="section-title">Make a Donation</h2>
+            <div class="donation-container">
+                <div class="donation-info">
+                    <h3>Why Donate?</h3>
+                    <p>Your contribution helps us provide essential services to communities in need:</p>
+                    <ul>
+                        <li><i class="fas fa-utensils"></i> Food and groceries for families</li>
+                        <li><i class="fas fa-tshirt"></i> Clothing and shoes for those in need</li>
+                        <li><i class="fas fa-book"></i> Educational materials for students</li>
+                        <li><i class="fas fa-hand-holding-medical"></i> Medical supplies and healthcare</li>
+                    </ul>
+                    <div class="donation-impact">
+                        <p>Your donation directly impacts lives:</p>
+                        <div class="impact-examples">
+                            <div class="impact-example">
+                                <span>$25</span>
+                                <p>Provides meals for a family for a week</p>
+                            </div>
+                            <div class="impact-example">
+                                <span>$50</span>
+                                <p>Supplies school materials for 5 children</p>
+                            </div>
+                            <div class="impact-example">
+                                <span>$100</span>
+                                <p>Funds essential medical supplies</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form id="donationForm" class="donation-form">
+                    <div class="form-group">
+                        <label for="firstName">First Name*</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                        <span class="error-message" id="firstNameError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name*</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                        <span class="error-message" id="lastNameError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address*</label>
+                        <input type="email" id="email" name="email" required>
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Mobile Number*</label>
+                        <input type="tel" id="phone" name="phone" required>
+                        <span class="error-message" id="phoneError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="country">Country*</label>
+                        <select id="country" name="country" required>
+                            <option value="">Select Country</option>
+                            <option value="Kenya">Kenya</option>
+                            <option value="Uganda">Uganda</option>
+                            <option value="Tanzania">Tanzania</option>
+                            <option value="Nigeria">Nigeria</option>
+                            <option value="South Africa">South Africa</option>
+                            <option value="USA">United States</option>
+                            <option value="UK">United Kingdom</option>
+                            <option value="Canada">Canada</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        <span class="error-message" id="countryError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="state">State/Province*</label>
+                        <input type="text" id="state" name="state" required>
+                        <span class="error-message" id="stateError"></span>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="address">Street Address*</label>
+                        <input type="text" id="address" name="address" required>
+                        <span class="error-message" id="addressError"></span>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="amount">Donation Amount*</label>
+                        <div class="amount-options">
+                            <div class="amount-option">
+                                <input type="radio" id="amount25" name="amount" value="25">
+                                <label for="amount25">$25</label>
+                            </div>
+                            <div class="amount-option">
+                                <input type="radio" id="amount50" name="amount" value="50">
+                                <label for="amount50">$50</label>
+                            </div>
+                            <div class="amount-option">
+                                <input type="radio" id="amount100" name="amount" value="100">
+                                <label for="amount100">$100</label>
+                            </div>
+                            <div class="amount-option">
+                                <input type="radio" id="amountCustom" name="amount" value="custom">
+                                <label for="amountCustom">Custom</label>
+                            </div>
+                        </div>
+                        <div id="customAmountContainer" class="custom-amount-container">
+                            <span class="currency-symbol">$</span>
+                            <input type="number" id="customAmount" name="customAmount" min="1" placeholder="Enter amount">
+                        </div>
+                        <span class="error-message" id="amountError"></span>
+                    </div>
+                    <div class="form-group full-width">
+                        <button type="submit" class="donate-submit-btn">Complete Donation</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="donation-faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Is my donation tax-deductible?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, KEMOS DONATION is a registered non-profit organization, and all donations are tax-deductible to the extent allowed by law.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How is my donation used?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Your donation directly supports our programs providing food, clothing, educational materials, and other essential services to communities in need.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I make a recurring donation?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, you can set up a recurring donation by contacting our team at <a href="mailto:info@kemosdonation.org">info@kemosdonation.org</a>.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Is my payment information secure?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we use industry-standard encryption and security measures to protect your personal and payment information.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About KEMOS</h3>
+                <p>We're on a mission to transform how people give and make a positive impact in communities worldwide.</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/login/"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://x.com/?lang=en"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://ke.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Charity Lane, Nairobi, Kenya</p>
+                <p><i class="fas fa-phone"></i> +254 123 456 789</p>
+                <p><i class="fas fa-envelope"></i> info@kemosdonation.org</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 KEMOS DONATION. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="donate.js"></script>
+</body>
+</html>
