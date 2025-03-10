@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="payment.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="" alt="">
+            KEMOS DONATION
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="project.html">Donate</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="payment-container">
+        <section class="donation-form">
+            <h2>Make Your Donation</h2>
+            <form id="donationForm">
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="Enter your name" required>
+                    <label for="name"><i class="fas fa-user"></i></label>
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="phone" placeholder="Enter your phone number" required>
+                    <label for="phone"><i class="fas fa-phone"></i></label>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                    <label for="email"><i class="fas fa-envelope"></i></label>
+                </div>
+                <div class="form-group">
+                    <input type="number" id="amount" placeholder="Enter donation amount" required>
+                    <label for="amount"><i class="fas fa-dollar-sign"></i></label>
+                </div>
+                <div class="donation-buttons">
+                    <button type="submit" class="mpesa"><i class="fas fa-mobile-alt"></i> Donate via M-Pesa</button>
+                    <button type="submit" class="paypal"><i class="fab fa-paypal"></i> Donate via PayPal</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="recent-donations">
+            <h2>Recent Donations</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Donor Name</th>
+                            <th>Amount ($)</th>
+                            <th>Timestamp</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>James Kimani</td>
+                            <td>100.00</td>
+                            <td>09/21/2023 10:00 AM</td>
+                        </tr>
+                        <tr>
+                            <td>Alice Smith</td>
+                            <td>50.00</td>
+                            <td>09/27/2023 3:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Anonymous</td>
+                            <td>200.00</td>
+                            <td>09/28/2023 9:45 AM</td>
+                        </tr>
+                        <tr>
+                            <td>Peter Taylor</td>
+                            <td>250.00</td>
+                            <td>09/29/2023 3:00 PM</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About KEMOS</h3>
+                <p>We're on a mission to transform how people give and make a positive impact in communities worldwide.</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/login/"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://x.com/?lang=en"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://ke.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Charity Lane, Nairobi, Kenya</p>
+                <p><i class="fas fa-phone"></i> +254 123 456 789</p>
+                <p><i class="fas fa-envelope"></i> info@kemosdonation.org</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; KEMOS DONATION. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="payment.js"></script>
+</body>
+</html>
+
