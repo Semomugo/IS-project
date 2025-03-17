@@ -1,0 +1,232 @@
+/* About Us Page Styles */
+.about-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://wallpaperaccess.com/full/2637581.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.section-description {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 30px;
+}
+
+/* Our Story Section */
+.our-story {
+  padding: 60px 20px;
+  background-color: white;
+}
+
+.story-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+}
+
+.story-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.story-text p {
+  margin-bottom: 15px;
+}
+
+.story-image {
+  flex: 1;
+  min-width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.story-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Mission & Vision Section */
+.mission-vision {
+  background-color: var(--light-blue);
+  padding: 60px 20px;
+}
+
+.mission-vision-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.mission,
+.vision {
+  flex: 1;
+  min-width: 300px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.mission h3,
+.vision h3 {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.mission h3 i,
+.vision h3 i {
+  margin-right: 10px;
+  font-size: 28px;
+}
+
+/* Donation Details */
+.donation-details {
+  padding: 30px;
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.donation-details h4 {
+  color: var(--primary-color);
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.donation-details ul {
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+.donation-details ul li {
+  margin-bottom: 8px;
+}
+
+.donation-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.stat {
+  background-color: var(--light-blue);
+  padding: 15px;
+  border-radius: 5px;
+  flex: 1;
+  min-width: 120px;
+  text-align: center;
+}
+
+.stat h5 {
+  font-size: 24px;
+  color: var(--primary-color);
+  margin-bottom: 5px;
+}
+
+/* Team Section */
+.team {
+  padding: 60px 20px;
+  background-color: white;
+}
+
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 30px auto 0;
+}
+
+.team-member {
+  width: calc(25% - 30px);
+  min-width: 220px;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.team-member:hover {
+  transform: translateY(-10px);
+}
+
+.team-member img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.team-member-info {
+  padding: 20px;
+  text-align: center;
+}
+
+.team-member-info h3 {
+  color: var(--primary-color);
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.team-member-info p {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.team-social {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.team-social a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-color: var(--light-blue);
+  border-radius: 50%;
+  color: var(--primary-color);
+  text-align: center;
+  line-height: 30px;
+  transition: all 0.3s;
+}
+
+.team-social a:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .team-member {
+    width: calc(50% - 15px);
+  }
+
+  .mission-vision-content {
+    flex-direction: column;
+  }
+
+  .story-content {
+    flex-direction: column-reverse;
+  }
+
+  .story-image {
+    margin-bottom: 20px;
+  }
+}
+
